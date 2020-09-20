@@ -1,0 +1,55 @@
+
+
+{% for block in section.blocks %}
+
+{%- assign product = [block.settings.featured_product] -%}
+
+<h1> {{product.title}} </h1>
+
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+    "name": "Add Products",
+    "settings": [ 
+    {
+        "type" : "product",
+        "label" : "Heading for Section",
+        "id" : "featured_products"
+    }    
+    ],
+    "blocks" : [
+    {
+        "type": "image",
+        "name": "Featured Products",
+        "settings": [
+
+        {
+            "type" : "product",
+            "label" : "Add Product",
+             "id" : "featured_product"
+
+        }
+        ]
+    }],
+
+    "presets": [
+    {
+        "category": "Products",
+        "name": "Product New Template"
+    }]
+}
+{% endschema %}

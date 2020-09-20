@@ -1,0 +1,31 @@
+<div class="header__container">
+    <div class="header__center-box">
+            <h3 class="header-text--main"> {{ section.settings.center_text }} </h3>      
+        <a href="#" class="btn"> {{ section.settings.button_text }} </a>
+    </div>
+
+</div>
+
+{% schema %}
+{
+    "name": "Header",
+    "settings": [ 
+    {
+        "type" : "text",
+        "label" : "Center Text",
+        "id" : "center_text"
+    },
+    {
+        "type" : "text",
+        "label" : "Button Text",
+        "id" : "button_text"
+    }    
+    ],
+
+    "presets": [
+    {
+        "category": "Icons With Text",
+        "name": "Header Background"
+    }]
+}
+{% endschema %}
